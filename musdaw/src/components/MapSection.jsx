@@ -2,6 +2,8 @@ import React from 'react';
 import { FaMapMarkedAlt } from 'react-icons/fa';
 
 const MapSection = () => {
+    const embeddedMapURL = "https://maps.app.goo.gl/7HVMh53m9UncEb2m7"; 
+
     return (
         <section className="bg-gray-50 py-12 px-4 md:px-20">
             <div className="max-w-6xl mx-auto text-center mb-8">
@@ -11,29 +13,22 @@ const MapSection = () => {
                 </p>
             </div>
 
-            <div className="max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden">
-                {/* Replace this iframe with your actual embedded map code */}
+            <div className="max-w-4xl mx-auto rounded-lg shadow-md overflow-hidden aspect-w-16 aspect-h-9">
                 <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d[YOUR_LATITUDE]![YOUR_LONGITUDE]!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s[YOUR_SPECIFIC_ADDRESS_OR_PLACE_ID]!2s!5e0!3m2!1sen!2ske!4v[YOUR_TIMESTAMP]!5m2!1sen!2ske"
-                    width="100%"
-                    height="450"
+                    src={embeddedMapURL}
+                    width="100%" 
+                    height="100%" 
                     style={{ border: 0 }}
                     allowFullScreen=""
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Church Location"
+                    title="SDA Moi University Church Location"
                 ></iframe>
             </div>
 
             <div className="mt-6 text-center text-gray-600">
                 <p>
-                    [Your Church Name]
-                    <br />
-                    [Your Street Address]
-                    <br />
-                    [Your City/Town], [Your County/Region]
-                    <br />
-                    Kenya
+                    <FaMapMarkedAlt className="inline mr-2" />
                 </p>
                 {/* Optional: Add contact information or directions link */}
                 {/* <p className="mt-2">

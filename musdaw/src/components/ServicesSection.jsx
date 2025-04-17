@@ -50,8 +50,8 @@ const ServicesSection = () => {
             variants={fadeIn}
             className="bg-white py-12 px-4 md:px-20"
         >
-            <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-semibold text-green-700 mb-4">Our Weekly Services</h2>
+            <div className="max-w-6xl mx-auto text-center mb-4">
+                <h2 className="text-xl md:text-xl font-semibold text-green-700 mb-2">Our Weekly Services</h2>
                 <p className="text-gray-600 leading-relaxed">
                     Discover the opportunities to worship, connect, and grow with our Musda community.
                 </p>
@@ -75,9 +75,7 @@ const ServicesSection = () => {
                         {service.details && (
                             <p className="text-sm text-gray-500">{service.details}</p>
                         )}
-                        {/* You could add a "More Info" button here */}
-                        {/* <button className="mt-4 text-green-500 hover:underline">More Info</button> */}
-                    </motion.div>
+                  </motion.div>
                 ))}
             </div>
         </motion.section>

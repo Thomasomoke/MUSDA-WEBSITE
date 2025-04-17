@@ -14,19 +14,18 @@ const Footer = () => {
                         <h3 className="text-lg font-semibold text-white mb-4">SDA Moi University Church</h3>
                         <p className="text-sm mb-2">
                             <FaMapMarkerAlt className="inline mr-2" />
-                            [Your Church Address Here], Moi University, Kenya
+                             Moi University, Kenya
                         </p>
                         <p className="text-sm mb-2">
                             <FaPhone className="inline mr-2" />
-                            [Your Phone Number Here]
+                           phone number
                         </p>
                         <p className="text-sm mb-2">
                             <FaEnvelope className="inline mr-2" />
-                            [Your Email Address Here]
+                            church addres
                         </p>
                     </div>
 
-                    {/* Quick Links */}
                     <div>
                         <h3 className="text-lg font-semibold text-white mb-4">Quick Links</h3>
                         <ul className="text-sm">
@@ -45,11 +44,9 @@ const Footer = () => {
                             <li>
                                 <Link to="/contact" className="hover:text-gray-400">Contact Us</Link>
                             </li>
-                            {/* Add more links as needed */}
                         </ul>
                     </div>
 
-                    {/* Connect With Us */}
                     <div>
                         <h3 className="text-lg font-semibold text-white mb-4">Connect With Us</h3>
                         <p className="text-sm mb-2">Stay connected with our community!</p>
@@ -66,11 +63,9 @@ const Footer = () => {
                             <a href="[Your Instagram Link]" target="_blank" rel="noopener noreferrer" className="hover:text-pink-500">
                                 <FaInstagram className="text-xl" />
                             </a>
-                            {/* Add more social media links */}
                         </div>
                     </div>
 
-                    {/* Newsletter (Optional) */}
                     <div>
                         <h3 className="text-lg font-semibold text-white mb-4">Subscribe to Our Newsletter</h3>
                         <p className="text-sm mb-2">Receive updates, news, and event information.</p>

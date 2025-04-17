@@ -24,21 +24,20 @@ const About = () => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true }}
-            className="bg-gray-50 py-16 px-4 md:px-20"
+            className="bg-gray-50 py-10 px-4 md:px-20"
         >
             <div className="max-w-6xl mx-auto">
-                <motion.div variants={fadeIn} className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold text-blue-700 mb-4">Our Story & Our Heart</h2>
+                <motion.div variants={fadeIn} className="text-center mb-4">
+                    <h2 className="text-xl md:text-xl font-bold text-blue-700 mb-4">Our Story & Our Heart</h2>
                     <p className="text-lg md:text-xl leading-relaxed text-gray-700">
-                        Discover the essence of the SDA Moi University community – who we are, what we believe, and what drives us.
+                        Discover the essence of the SDA Moi University community who we are, what we believe, and what drives us.
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {/* Our Mission Card */}
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     <motion.div variants={cardVariants} whileHover="hover" className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
                         <div className="w-12 h-12 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center mb-4">
-                            <FaChurch className="text-2xl" />
+                            <FaChurch className="text-xl" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Mission</h3>
                         <p className="text-gray-600 leading-relaxed">
@@ -46,10 +45,9 @@ const About = () => {
                         </p>
                     </motion.div>
 
-                    {/* Our Community Card */}
                     <motion.div variants={cardVariants} whileHover="hover" className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
                         <div className="w-12 h-12 rounded-full bg-green-100 text-green-700 flex items-center justify-center mb-4">
-                            <FaUsers className="text-2xl" />
+                            <FaUsers className="text-xl" />
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mb-2">Our Community</h3>
                         <p className="text-gray-600 leading-relaxed">
@@ -57,7 +55,7 @@ const About = () => {
                         </p>
                     </motion.div>
 
-                    {/* Our Beliefs Card */}
+                   
                     <motion.div variants={cardVariants} whileHover="hover" className="bg-white rounded-lg shadow-md p-6 flex flex-col items-center text-center">
                         <div className="w-12 h-12 rounded-full bg-yellow-100 text-yellow-700 flex items-center justify-center mb-4">
                             <FaBible className="text-2xl" />

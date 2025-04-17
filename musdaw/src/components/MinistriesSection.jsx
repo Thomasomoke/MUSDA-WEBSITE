@@ -49,16 +49,16 @@ const MinistriesSection = () => {
             whileInView="visible"
             viewport={{ once: true }}
             variants={fadeIn}
-            className="bg-gray-100 py-12 px-4 md:px-20"
+            className="bg-gray-100 py-8 px-4 md:px-20"
         >
-            <div className="max-w-6xl mx-auto text-center mb-8">
-                <h2 className="text-2xl md:text-3xl font-semibold text-blue-700 mb-4">Our Ministries</h2>
+            <div className="max-w-6xl mx-auto text-center mb-4">
+                <h2 className="text-xl md:text-xl font-semibold text-blue-700 mb-2">Our Ministries</h2>
                 <p className="text-gray-600 leading-relaxed">
                     Explore the various ways you can connect, grow, and serve with our church community.
                 </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {ministries.map((ministry, index) => (
                     <motion.div
                         key={index}
@@ -66,16 +66,14 @@ const MinistriesSection = () => {
                         whileHover="hover"
                         className="bg-white rounded-lg shadow-md p-6 text-center"
                     >
-                        <div className="flex items-center justify-center h-16 mb-4">
+                        <div className="flex items-center justify-center h-16 mb-2">
                             {ministry.icon}
                         </div>
                         <h3 className="text-xl font-semibold text-gray-800 mb-2">{ministry.title}</h3>
                         <p className="text-gray-600 leading-relaxed text-sm md:text-base">
                             {ministry.description}
                         </p>
-                        {/* You could add a "Learn More" button here if needed */}
-                        {/* <button className="mt-4 text-blue-500 hover:underline">Learn More</button> */}
-                    </motion.div>
+                  </motion.div>
                 ))}
             </div>
         </motion.section>
