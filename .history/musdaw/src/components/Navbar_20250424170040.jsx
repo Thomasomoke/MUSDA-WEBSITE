@@ -2,26 +2,25 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const navigation = [
-        { name: 'Home', href: '/' },
-        { name: 'About', href: '/about' },
-        { name: 'Services', href: '/services' },
+        { name: 'home', href: 'home' },
+        { name: 'About', href: '#about' },
+        { name: 'Beliefs', href: '#beliefs' },
         {
             name: 'Ministries',
-            href: '/ministries',
+            href: '#ministries',
             subLinks: [
-                { name: 'Children', href: '/ministries/children' },
-                { name: 'Youth', href: '/ministries/youth' },
-                { name: 'Women', href: '/ministries/women' },
-                { name: 'Community Service', href: '/ministries/community' },
+                { name: 'Children', href: '#children' },
+                { name: 'Youth', href: '#youth' },
+                { name: 'Women', href: '#women' },
+                { name: 'Community Service', href: '#community' },
             ]
         },
-        { name: 'News/Events', href: '/news' },
-        { name: 'Contact', href: '/contact' },
+        { name: 'Events', href: '#events' },
+        { name: 'Contact', href: '#contact' },
     ];
 
     return (
@@ -31,11 +30,11 @@ const Navbar = () => {
                     <div className="flex-shrink-0 flex items-center">
                         <img
                             className="h-8 w-8"
-                            src="/sda-logo.png"
+                            src="/sda-logo.png" // Replace with your church logo
                             alt="Church logo"
                         />
-                        <span className="ml-2 text-white text-lg font-semibold">
-                            MUSDA
+                        <span className="ml-2 text-white text-xl font-semibold">
+                            Seventh-day Adventist Church
                         </span>
                     </div>
 
@@ -57,13 +56,13 @@ const Navbar = () => {
                                                 {item.subLinks.map((subItem) => (
                                                     <Menu.Item key={subItem.name}>
                                                         {({ active }) => (
-                                                            <Link
-                                                                to={subItem.href}
+                                                            <a
+                                                                href={subItem.href}
                                                                 className={`${active ? 'bg-blue-50 text-blue-700' : 'text-gray-700'
                                                                     } block px-4 py-2 text-sm`}
                                                             >
                                                                 {subItem.name}
-                                                            </Link>
+                                                            </a>
                                                         )}
                                                     </Menu.Item>
                                                 ))}
@@ -71,13 +70,13 @@ const Navbar = () => {
                                         </Transition>
                                     </Menu>
                                 ) : (
-                                    <Link
+                                    <a
                                         key={item.name}
-                                        to={item.href}
+                                        href={item.href}
                                         className="text-gray-300 hover:text-white px-3 py-2 text-sm font-medium transition-colors"
                                     >
                                         {item.name}
-                                    </Link>
+                                    </a>
                                 )
                             ))}
                             <button className="ml-4 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
@@ -114,22 +113,20 @@ const Navbar = () => {
                 <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-slate-800">
                     {navigation.map((item) => (
                         <div key={item.name}>
-                            <Link
-                                to={item.href}
+                            <a
+                                href={item.href}
                                 className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
-                                onClick={() => setIsOpen(false)}
                             >
                                 {item.name}
-                            </Link>
+                            </a>
                             {item.subLinks && item.subLinks.map((subItem) => (
-                                <Link
+                                <a
                                     key={subItem.name}
-                                    to={subItem.href}
+                                    href={subItem.href}
                                     className="text-gray-300 hover:bg-gray-700 hover:text-white block pl-6 pr-3 py-2 rounded-md text-base font-medium"
-                                    onClick={() => setIsOpen(false)}
                                 >
                                     {subItem.name}
-                                </Link>
+                                </a>
                             ))}
                         </div>
                     ))}

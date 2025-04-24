@@ -6,7 +6,6 @@ import About from './pages/About';
 import Ministries from './pages/Ministries';
 import News from './pages/News';
 import Contact from './pages/Contact';
-import Women from './pages/Women';
 
 const App = () => {
     return (
@@ -17,7 +16,6 @@ const App = () => {
                     <Route path="/services" element={<Services />} />
                     <Route path="/about" element={<About />} />
                     <Route path="/ministries" element={<Ministries />} />
-                    <Route path="/ministries/women" element={<Women />} />
                     <Route path="/news" element={<News />} />
                     <Route path="/contact" element={<Contact />} />
                 </Routes>
